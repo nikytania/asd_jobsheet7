@@ -1,10 +1,9 @@
-package Praktikum05;
 import java.util.Scanner;
 
-public class DosenMain {
+public class DosenMain18 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        DataDosen data = new DataDosen();
+        DataDosen18 data = new DataDosen18();
 
         while (true) {
             System.out.println("\nMenu:");
@@ -13,7 +12,9 @@ public class DosenMain {
             System.out.println("3. Sorting ASC (Bubble Sort)");
             System.out.println("4. Sorting DSC (Selection Sort)");
             System.out.println("5. Sorting DSC (Insertion Sort)");
-            System.out.println("6. Keluar");
+            System.out.println("6. Pencarian Sequential (Nama)");
+            System.out.println("7. Pencarian Binary (Usia)");
+            System.out.println("8. Keluar");
             System.out.print("Pilih menu: ");
             int pilihan = sc.nextInt();
             sc.nextLine(); // Buang newline agar tidak mengganggu next input
@@ -32,7 +33,7 @@ public class DosenMain {
                         int usia = sc.nextInt();
                         sc.nextLine(); // Buang newline
 
-                        Dosen dsn = new Dosen(kode, nama, jk, usia);
+                        Dosen18 dsn = new Dosen18(kode, nama, jk, usia);
                         data.tambah(dsn);
 
                         System.out.print("Tambah dosen lagi? (Y/N): ");
@@ -61,6 +62,17 @@ public class DosenMain {
                     data.tampil();
                     break;
                 case 6:
+                    System.out.print("Masukkan nama dosen yang dicari: ");
+                    String namaCari = sc.nextLine();
+                    data.PencarianDataSequential18(namaCari);
+                    break;
+                case 7:
+                    System.out.print("Masukkan usia dosen yang dicari: ");
+                    int usiaCari = sc.nextInt();
+                    sc.nextLine(); // Buang newline
+                    data.PencarianDataBinary(usiaCari);
+                    break;
+                case 8:
                     System.out.println("Keluar dari program");
                     return; // Hentikan program
                 default:

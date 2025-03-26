@@ -1,13 +1,12 @@
-package Praktikum05;
 
-public class Dosen {
+public class Dosen18 {
   String kode;
   String nama;
   Boolean jenisKelamin;
   int usia;
 
 
-  Dosen(String kd, String name, Boolean jk, int age){
+  Dosen18(String kd, String name, Boolean jk, int age){
     kode = kd;
     nama = name;
     jenisKelamin = jk;
