@@ -4,7 +4,12 @@ public class MahasiswaDemo18 {
   public static void main(String[] args) {
     MahasiswaBerprestasi18 list = new MahasiswaBerprestasi18();
     Scanner sc = new Scanner(System.in);
-    int jumlahMahasiswa=5;
+    
+    System.out.print("Masukkan jumlah mahasiswa: ");
+    int jumlahMahasiswa = sc.nextInt();
+    sc.nextLine();
+
+    list.listMhs = new Mahasiswa[jumlahMahasiswa];
 
     for (int i = 0; i < jumlahMahasiswa; i++) {
         System.out.println("\nMasukkan data mahasiswa ke-" + (i + 1));
